@@ -12,6 +12,7 @@ CadastroController.$inject = ['$location', 'CursoService', '$routeParams'];
             vm.idCli = $routeParams.idCli
             buscarId(vm.idCli)
             vm.textoBotao = 'Editar'
+            vm.texto = "Editar Cadastro"
         }
 
         vm.navegar = function(rota){ 

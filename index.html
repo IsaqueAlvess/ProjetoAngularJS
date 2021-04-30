@@ -34,12 +34,12 @@
         function MenuController($location){
             vm = this;
             vm.itensMenu = [
-                {titulo:'Home', class:'nav-link active'},   //iniciamos o home com a class active
+                {titulo:'Home', class:'nav-link active'},
                 {titulo:'Cadastro', class:'nav-link'}    
             ]
             vm.navegar = function(route, array){
                 angular.forEach(array, function(item){
-                    if(item.titulo == route){     /*Verificação para saber se o cara que eu cliquei possui a mesma rota do nosso active (class active)*/
+                    if(item.titulo == route){     
                         item.class='nav-link active'
                     }else{
                         item.class = 'nav-link'         
