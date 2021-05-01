@@ -1,14 +1,10 @@
 {
   "clientes": [
     {
-      "id": 1,
-      "nome": "Isaqueee2",
-      "rg": "123455"
-    },
-    {
       "nome": "Brenda",
       "rg": "010102",
-      "id": 2
+      "id": 2,
+      "idade": "23"
     }
   ]
 }
