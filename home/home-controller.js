@@ -25,13 +25,17 @@ HomeController.$inject = ['$location','CursoService'];
                 }
             })
         }
-
+        
         vm.excluirClientes = function(id){
-            CursoService.exec_DELETE(id).then(function(resposta){
-                if(resposta){
-                    //Msg resposta
-                }
-            })
+            if(window.confirm("Deseja excluir cadastro com ID "+id+" ?") == true){
+                CursoService.exec_DELETE(id).then(function(resposta){
+                    if(resposta){
+                        alert("Excluído com sucesso!");
+                    }
+                })
+            }else{
+                vm.listarClientes();
+            }
         }
 
         vm.editar = function(id){

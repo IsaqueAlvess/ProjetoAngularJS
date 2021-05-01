@@ -4,9 +4,9 @@
     <alert-para-usuario msg=" 'A conexão com o banco de dados falhou!' "tipo="'erro'">
     </alert-para-usuario>
   </div>
-
-  <label for="exampleDataList" class="form-label">Filtro de pesquisa</label>
-  <input class="form-control" list="datalistOptions" ng-model="vm.filtroPesquisa" id="exampleDataList" placeholder="Filtrar por..">
+    <h1 style="margin-top: 10px;">{{vm.texto}}</h1>
+  <label for="exampleDataList" class="form-label" style="margin-top: 10px;">Filtro de pesquisa</label>
+  <input class="form-control" list="datalistOptions" ng-model="vm.filtroPesquisa" id="exampleDataList" placeholder="Filtrar por.."> 
 
   <table class="table" ng-if="vm.clientes">
       <thead>
@@ -14,6 +14,7 @@
           <th scope="col">ID</th>
           <th scope="col">Nome</th>
           <th scope="col">RG</th>
+          <th scope="col">Idade</th>
           <th scope="col">Editar</th>
           <th scope="col">Excluir</th>
         </tr>
@@ -23,6 +24,7 @@
           <th scope="row">{{cliente.id}}</th>
           <td>{{cliente.nome}}</td>
           <td>{{cliente.rg}}</td>
+          <td>{{cliente.idade}}</td>
           <td><button type="button" class="btn btn-outline-warning" ng-click="vm.editar(cliente.id)">Editar</button></td>
           <td><button type="button" class="btn btn-outline-danger" ng-click="vm.excluirClientes(cliente.id)">Excluir</button></td>
 

@@ -7,11 +7,13 @@ CadastroController.$inject = ['$location', 'CursoService', '$routeParams'];
         vm.cliente = {}
         vm.idCli = ''
         vm.textoBotao = 'Cadastrar'
+        
 
         if($routeParams.idCli){
             vm.idCli = $routeParams.idCli
             buscarId(vm.idCli)
             vm.textoBotao = 'Editar'
+            vm.texto = "Editar Cadastro"
         }
 
         vm.navegar = function(rota){ 
@@ -33,8 +35,6 @@ CadastroController.$inject = ['$location', 'CursoService', '$routeParams'];
                     }
                 })
             }
-
-
             
             vm.navegar('/')
         }
